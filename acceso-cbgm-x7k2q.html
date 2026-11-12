@@ -1,0 +1,663 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Comprá bien, ganá más · Guía Gestro</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F2;--fg:#16181A;--mut:#4C524D;--line:#D9DCD5;--acc:#1E6B47;--soft:#E6F1EA}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 'IBM Plex Sans',system-ui,sans-serif}
+.bar{background:var(--fg);color:var(--bg);padding:14px max(16px,env(safe-area-inset-left));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bar b{font-family:Archivo,sans-serif;letter-spacing:.14em;color:#9FD4B5}.bar span{font-size:14px;opacity:.85}
+main{max-width:760px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-left)) 80px}
+h1{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0 0 12px}
+h2{font-family:Archivo,sans-serif;font-size:28px;line-height:1.15;margin:48px 0 12px;color:var(--fg)}
+h3{font-family:Archivo,sans-serif;font-size:21px;margin:32px 0 8px}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+blockquote{margin:16px 0;padding:14px 18px;background:var(--soft);border-radius:8px}blockquote p{margin:0}
+a{color:var(--acc)}li{margin:4px 0}
+.tw{overflow-x:auto;margin:16px 0}table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums;background:#fff}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;min-width:90px}th{background:var(--soft)}
+.tip{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:24px 0;font-size:15px;color:var(--mut)}
+@media print{.bar,.tip{display:none}body{background:#fff}h2{break-before:page}}
+</style></head><body>
+<div class="bar"><b>GESTRO</b><span>Tu guía · Guardá este link para volver cuando quieras</span></div>
+<main>
+<div class="tip">¡Gracias por tu compra! Esta es tu guía. Para tenerla en PDF, usá <strong>Imprimir → Guardar como PDF</strong> en tu navegador. ¿Dudas? Escribinos a @somosgestro.</div>
+<h1>Comprá bien, ganá más</h1>
+<p><strong>La guía para saber cuánto te cuesta de verdad cada plato</strong></p>
+<p>Una guía de <strong>Gestro</strong> · Gestión de costos y compras en gastronomía</p>
+<p>Instagram: @somosgestro</p>
+<hr />
+<h2>Índice</h2>
+<ol>
+<li>Por qué el precio por kilo te miente</li>
+<li>Conceptos clave y fórmulas</li>
+<li>Cómo calcular el rendimiento de un insumo</li>
+<li>Cómo costear un plato (ficha técnica)</li>
+<li>Cómo poner el precio de venta</li>
+<li>Cómo comparar proveedores por costo real</li>
+<li>Cómo negociar con proveedores</li>
+<li>Control mensual: tu food cost real</li>
+<li>Plan de 7 días para aplicarlo</li>
+<li>Plantillas, checklists y glosario</li>
+<li>Soluciones de los ejercicios</li>
+</ol>
+<hr />
+<h2>Antes de empezar</h2>
+<p>Esta guía es para dueños de restaurantes y para quienes están por abrir su primer local. No hace falta saber de números: todo se resuelve con cinco fórmulas simples, una balanza y una calculadora.</p>
+<p><strong>Cómo usarla:</strong> leé cada capítulo, hacé los ejercicios con tus propios insumos y completá las plantillas del capítulo 10. Si querés ir directo a la acción, arrancá por el plan de 7 días del capítulo 9.</p>
+<p><strong>La promesa:</strong> en una semana vas a saber el costo real de tus platos principales y en qué insumos estás perdiendo plata.</p>
+<blockquote>
+<p>Los precios de los ejemplos son ilustrativos. Reemplazalos siempre por los tuyos.</p>
+</blockquote>
+<p>También podés usar gratis nuestra <a href="/calculadora">calculadora de costo real</a> para comparar dos proveedores en un minuto.</p>
+<hr />
+<h2>1. Por qué el precio por kilo te miente</h2>
+<p>Cuando un proveedor te pasa un precio, te dice cuánto cuesta un kilo de lo que te entrega. No te dice cuánto cuesta un kilo de lo que vas a servir. Entre una cosa y la otra está la grasa que sacás, el hueso, los recortes, lo que se pierde en la cocción y lo que se tira.</p>
+<p><strong>Un caso real:</strong> en un restaurante se compraba bife de chorizo a un proveedor barato. Se probó otro proveedor un 25% más caro, que entregaba la carne mucho más limpia. Se desperdiciaba mucho menos, y la opción cara terminó saliendo más barata por porción servida.</p>
+<p>Esta guía te enseña a ver ese número oculto, a usarlo para poner precios que dejen plata y a negociar con tus proveedores con datos en la mano.</p>
+<hr />
+<h2>2. Conceptos clave y fórmulas</h2>
+<p>Con estas cinco fórmulas podés costear cualquier cosa de tu carta:</p>
+<ul>
+<li><strong>Rendimiento (%)</strong> = peso aprovechable ÷ peso bruto × 100</li>
+<li><strong>Costo real por kilo</strong> = precio por kilo ÷ rendimiento (en decimal)</li>
+<li><strong>Costo del plato</strong> = suma del costo real de cada ingrediente según la cantidad que lleva</li>
+<li><strong>Food cost (%)</strong> = costo del plato ÷ precio de venta neto × 100</li>
+<li><strong>Margen bruto</strong> = precio de venta neto − costo del plato</li>
+</ul>
+<p><strong>Definiciones rápidas:</strong></p>
+<ul>
+<li><strong>Peso bruto:</strong> lo que comprás y pesás al recibir.</li>
+<li><strong>Peso aprovechable:</strong> lo que queda listo para usar después de limpiar, desgrasar, pelar o porcionar.</li>
+<li><strong>Merma:</strong> todo lo que se pierde en el camino.</li>
+<li><strong>Food cost:</strong> qué porcentaje del precio de venta se va en mercadería.</li>
+</ul>
+<p><strong>Regla de oro:</strong> trabajá todos los números con IVA o sin IVA, pero nunca mezclados. Lo más prolijo es calcular sin IVA, tanto compras como ventas.</p>
+<hr />
+<h2>3. Cómo calcular el rendimiento de un insumo</h2>
+<p>La prueba de rendimiento es la herramienta más importante de esta guía. Se hace una vez por insumo y por proveedor, y se repite cada tanto o cuando cambia la calidad.</p>
+<p><strong>Paso a paso:</strong></p>
+<ol>
+<li>Elegí una compra normal, ni la mejor ni la peor.</li>
+<li>Pesá el insumo tal como llega (peso bruto).</li>
+<li>Limpialo como lo hacés siempre.</li>
+<li>Pesá lo que queda listo para usar (peso aprovechable).</li>
+<li>Si pierde mucho peso al cocinarse, pesá también una porción cocida de prueba.</li>
+<li>Calculá el rendimiento y el costo real por kilo.</li>
+<li>Anotalo en la Plantilla 1.</li>
+</ol>
+<p><strong>Ejemplo: el bife de chorizo</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Proveedor A</th>
+<th>Proveedor B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precio por kilo</td>
+<td>$10.000</td>
+<td>$12.500 (25% más)</td>
+</tr>
+<tr>
+<td>Peso bruto</td>
+<td>5 kg</td>
+<td>5 kg</td>
+</tr>
+<tr>
+<td>Peso aprovechable</td>
+<td>3,5 kg</td>
+<td>4,5 kg</td>
+</tr>
+<tr>
+<td>Rendimiento</td>
+<td>70%</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Costo real por kilo</td>
+<td>$14.286</td>
+<td>$13.889</td>
+</tr>
+<tr>
+<td>Costo de una porción de 300 g</td>
+<td>$4.286</td>
+<td>$4.167</td>
+</tr>
+</tbody>
+</table></div>
+<p>El proveedor B es más caro por kilo, pero más barato por porción. Si vendés 600 bifes por mes, son unos $71.000 mensuales a favor de B, solo en este plato.</p>
+<p><strong>Errores comunes:</strong></p>
+<ul>
+<li>Hacer la prueba una sola vez y no repetirla nunca.</li>
+<li>Que cada cocinero limpie distinto: definí un estándar.</li>
+<li>No contar los recortes que sí se reutilizan (empanadas, salsas, menú del día): si los usás, restan merma.</li>
+</ul>
+<p><strong>Ejercicio 1:</strong> compraste 4 kg de lomo a $15.000 el kilo. Después de limpiarlo te quedan 3,2 kg. ¿Cuál es el rendimiento y cuál es el costo real por kilo?</p>
+<p><strong>Tarea:</strong> hacé la prueba de rendimiento con tus tres insumos más caros esta semana.</p>
+<hr />
+<h2>4. Cómo costear un plato (ficha técnica)</h2>
+<p>La ficha técnica es la receta con números: qué lleva cada plato, cuánto de cada cosa y cuánto cuesta. Sirve para costear y para que el plato salga siempre igual.</p>
+<p><strong>Paso a paso:</strong></p>
+<ol>
+<li>Listá todos los ingredientes, incluso los chicos (aceite, sal, salsas, pan, guarnición).</li>
+<li>Anotá la cantidad aprovechable de cada uno.</li>
+<li>Usá el costo real por kilo o litro, no el precio de lista.</li>
+<li>Multiplicá cantidad por costo real.</li>
+<li>Sumá todo y agregá entre 3% y 5% por mermas varias y condimentos.</li>
+</ol>
+<p><strong>Ejemplo: bife de chorizo con papas fritas</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ingrediente</th>
+<th>Cantidad</th>
+<th>Costo real</th>
+<th>Costo en el plato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bife de chorizo</td>
+<td>300 g</td>
+<td>$13.889/kg</td>
+<td>$4.167</td>
+</tr>
+<tr>
+<td>Papa (rinde 75%)</td>
+<td>250 g</td>
+<td>$1.600/kg</td>
+<td>$400</td>
+</tr>
+<tr>
+<td>Aceite de fritura</td>
+<td>50 ml</td>
+<td>$3.000/l</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Chimichurri</td>
+<td>30 g</td>
+<td>$5.000/kg</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Pan</td>
+<td>1 porción</td>
+<td>$100</td>
+<td>$100</td>
+</tr>
+<tr>
+<td><strong>Subtotal</strong></td>
+<td></td>
+<td></td>
+<td><strong>$4.967</strong></td>
+</tr>
+<tr>
+<td>Mermas varias (5%)</td>
+<td></td>
+<td></td>
+<td>$248</td>
+</tr>
+<tr>
+<td><strong>Costo total</strong></td>
+<td></td>
+<td></td>
+<td><strong>$5.215</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tarea:</strong> armá la ficha técnica de tus cinco platos más vendidos con la Plantilla 2.</p>
+<hr />
+<h2>5. Cómo poner el precio de venta</h2>
+<p><strong>Precio de venta neto</strong> = costo del plato ÷ food cost objetivo</p>
+<p><strong>¿Qué food cost usar?</strong> Como referencia, muchos restaurantes trabajan entre 28% y 35%. Las carnes suelen quedar más arriba; pastas, ensaladas y postres, más abajo. Lo importante es que el promedio de tu carta cierre con tus gastos fijos.</p>
+<p><strong>Ejemplo:</strong></p>
+<ul>
+<li>Costo del plato: $5.215</li>
+<li>Food cost objetivo: 32%</li>
+<li>Precio neto: $5.215 ÷ 0,32 = $16.297 → redondeado a $16.500</li>
+<li>Con IVA (21%): $16.500 × 1,21 = $19.965 → $20.000 en carta</li>
+</ul>
+<p><strong>Mirá la plata, no solo el porcentaje:</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Plato</th>
+<th>Precio neto</th>
+<th>Costo</th>
+<th>Food cost</th>
+<th>Te deja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ensalada</td>
+<td>$8.000</td>
+<td>$2.000</td>
+<td>25%</td>
+<td>$6.000</td>
+</tr>
+<tr>
+<td>Bife de chorizo</td>
+<td>$16.500</td>
+<td>$5.215</td>
+<td>32%</td>
+<td>$11.285</td>
+</tr>
+</tbody>
+</table></div>
+<p>El bife tiene peor porcentaje, pero cada venta deja casi el doble. Empujá en tu carta los platos que más plata dejan.</p>
+<p><strong>Ejercicio 2:</strong> un plato te cuesta $3.600 y querés un food cost del 30%. ¿A cuánto lo vendés, neto de IVA?</p>
+<hr />
+<h2>6. Cómo comparar proveedores por costo real</h2>
+<p><strong>Paso a paso:</strong></p>
+<ol>
+<li>Pedí cotización a por lo menos tres proveedores, con la misma especificación (corte, calibre, grasa, marca).</li>
+<li>Pedí una muestra o hacé una compra chica a cada uno.</li>
+<li>Hacé la prueba de rendimiento con cada muestra.</li>
+<li>Calculá el costo real por kilo de cada uno.</li>
+<li>Sumá lo que no es precio: plazo de pago, entregas, cumplimiento, calidad pareja, cambios de mercadería.</li>
+<li>Decidí con la Plantilla 3.</li>
+</ol>
+<p><strong>Ejemplo: papa para fritas</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Proveedor A</th>
+<th>Proveedor B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precio por kilo</td>
+<td>$1.200</td>
+<td>$1.400</td>
+</tr>
+<tr>
+<td>Rendimiento</td>
+<td>75%</td>
+<td>88%</td>
+</tr>
+<tr>
+<td>Costo real por kilo</td>
+<td>$1.600</td>
+<td>$1.591</td>
+</tr>
+<tr>
+<td>Plazo de pago</td>
+<td>Contado</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td>Entregas</td>
+<td>2 por semana</td>
+<td>3 por semana</td>
+</tr>
+</tbody>
+</table></div>
+<p>En costo real quedan casi iguales, pero B paga a 15 días y entrega más seguido. B es mejor compra.</p>
+<p><strong>Ejercicio 3:</strong> el proveedor A vende salmón a $20.000 el kilo con un rendimiento del 60%. El B, a $24.000 con un rendimiento del 80%. ¿Cuál conviene?</p>
+<hr />
+<h2>7. Cómo negociar con proveedores</h2>
+<p>Negociar no es pedir descuento. Es llegar con datos y buscar un acuerdo que te convenga y que el proveedor pueda sostener.</p>
+<p><strong>Antes de negociar, tené claro:</strong></p>
+<ul>
+<li>Cuánto le comprás por mes, en kilos y en plata.</li>
+<li>Tu costo real actual con ese proveedor.</li>
+<li>Qué te ofrecen otros proveedores (cotizaciones reales).</li>
+<li>Qué te importa más: precio, plazo, calidad o entregas.</li>
+</ul>
+<p><strong>Qué negociar además del precio:</strong></p>
+<ul>
+<li><strong>Plazo de pago:</strong> de contado a 15 o 30 días.</li>
+<li><strong>Precio fijo por un período:</strong> te protege de los aumentos.</li>
+<li><strong>Bonificación por volumen.</strong></li>
+<li><strong>Especificación de calidad:</strong> mejor calidad puede ser mejor rendimiento.</li>
+<li><strong>Frecuencia de entrega:</strong> menos stock parado, menos merma.</li>
+<li><strong>Cambio de mercadería defectuosa sin discusión.</strong></li>
+</ul>
+<p><strong>Guión de mensaje:</strong></p>
+<blockquote>
+<p>Hola [nombre], ¿cómo va? Estamos revisando proveedores de [insumo]. Hoy te compramos unos [X kg] por mes. Tenemos una cotización de [precio] con [condiciones]. Nos gusta trabajar con vos y queremos seguir: ¿podemos mejorar [precio / plazo / precio fijo por 30 días]? Si llegamos a un acuerdo, podemos sumarte también [otro insumo].</p>
+</blockquote>
+<p><strong>Errores a evitar:</strong></p>
+<ul>
+<li>Negociar sin saber cuánto comprás.</li>
+<li>Cambiar de proveedor solo por precio, sin probar el rendimiento.</li>
+<li>Exprimir tanto al proveedor que después baja la calidad.</li>
+<li>Cerrar acuerdos de palabra: dejalos por escrito, aunque sea por WhatsApp.</li>
+</ul>
+<p><strong>Tarea:</strong> elegí tu proveedor de mayor gasto, completá el checklist de negociación y mandale el mensaje esta semana.</p>
+<hr />
+<h2>8. Control mensual: tu food cost real</h2>
+<p>Las fichas técnicas te dicen cuánto deberías gastar (food cost teórico). El control mensual te dice cuánto gastaste de verdad (food cost real). La diferencia es plata que se escapa.</p>
+<ul>
+<li><strong>Consumo</strong> = inventario inicial + compras del mes − inventario final</li>
+<li><strong>Food cost real (%)</strong> = consumo ÷ ventas netas del mes × 100</li>
+</ul>
+<p><strong>Ejemplo:</strong> inventario inicial $800.000 + compras $2.400.000 − inventario final $700.000 = consumo $2.500.000. Con ventas netas de $7.500.000, el food cost real es 33,3%. Si el teórico era 30%, se pierden unos $250.000 por mes.</p>
+<p><strong>Si la diferencia supera 2 puntos, revisá:</strong></p>
+<ul>
+<li>Porciones más grandes que las de la ficha.</li>
+<li>Mercadería que se vence o se tira.</li>
+<li>Recepción sin pesar ni controlar.</li>
+<li>Aumentos no trasladados a la ficha.</li>
+<li>Consumo de personal o faltantes no registrados.</li>
+</ul>
+<p><strong>Ejercicio 4:</strong> inventario inicial $500.000, compras $1.800.000, inventario final $450.000, ventas netas $5.500.000. ¿Cuál es tu food cost real?</p>
+<hr />
+<h2>9. Plan de 7 días para aplicarlo</h2>
+<ul>
+<li>☐ <strong>Día 1:</strong> listá tus 10 platos más vendidos y los insumos que llevan.</li>
+<li>☐ <strong>Día 2:</strong> con tus facturas del último mes, identificá los 5 insumos en los que más gastás.</li>
+<li>☐ <strong>Día 3:</strong> hacé la prueba de rendimiento de esos 5 insumos.</li>
+<li>☐ <strong>Día 4:</strong> armá la ficha técnica de tus 5 platos más vendidos.</li>
+<li>☐ <strong>Día 5:</strong> calculá el food cost de cada plato y marcá los que superan tu objetivo.</li>
+<li>☐ <strong>Día 6:</strong> pedí cotización a 2 o 3 proveedores para tu insumo más caro y comparalos por costo real.</li>
+<li>☐ <strong>Día 7:</strong> armá tu plan: qué precios ajustar, qué proveedor cambiar y con quién negociar.</li>
+</ul>
+<hr />
+<h2>10. Plantillas, checklists y glosario</h2>
+<h3>Plantilla 1: prueba de rendimiento</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Dato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insumo</td>
+<td></td>
+</tr>
+<tr>
+<td>Proveedor</td>
+<td></td>
+</tr>
+<tr>
+<td>Fecha</td>
+<td></td>
+</tr>
+<tr>
+<td>Precio por kilo</td>
+<td></td>
+</tr>
+<tr>
+<td>Peso bruto (kg)</td>
+<td></td>
+</tr>
+<tr>
+<td>Peso aprovechable (kg)</td>
+<td></td>
+</tr>
+<tr>
+<td>Recortes reutilizados (kg)</td>
+<td></td>
+</tr>
+<tr>
+<td>Rendimiento (%)</td>
+<td></td>
+</tr>
+<tr>
+<td>Costo real por kilo</td>
+<td></td>
+</tr>
+<tr>
+<td>Responsable</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Plantilla 2: ficha técnica</h3>
+<p><strong>Plato:</strong> <strong><em>_</em>_ <strong>Porciones:</strong> </strong><strong><em>_ <strong>Actualizada:</strong> </em></strong>___</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ingrediente</th>
+<th>Cantidad</th>
+<th>Unidad</th>
+<th>Costo real por unidad</th>
+<th>Costo en el plato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Subtotal</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mermas varias (3–5%)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Costo total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Food cost objetivo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Precio neto sugerido</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Plantilla 3: comparador de proveedores</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Proveedor 1</th>
+<th>Proveedor 2</th>
+<th>Proveedor 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insumo y especificación</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Precio por kilo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Rendimiento (%)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Costo real por kilo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Plazo de pago</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Frecuencia de entrega</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pedido mínimo</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cumplimiento (1 a 5)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Calidad pareja (1 a 5)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Decisión</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Plantilla 4: control mensual</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Monto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventario inicial</td>
+<td></td>
+</tr>
+<tr>
+<td>+ Compras del mes</td>
+<td></td>
+</tr>
+<tr>
+<td>− Inventario final</td>
+<td></td>
+</tr>
+<tr>
+<td>= Consumo</td>
+<td></td>
+</tr>
+<tr>
+<td>Ventas netas</td>
+<td></td>
+</tr>
+<tr>
+<td>Food cost real (%)</td>
+<td></td>
+</tr>
+<tr>
+<td>Food cost teórico (%)</td>
+<td></td>
+</tr>
+<tr>
+<td>Diferencia (puntos)</td>
+<td></td>
+</tr>
+<tr>
+<td>Causas y acciones</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>Checklist: recepción de mercadería</h3>
+<ul>
+<li>☐ Pesar todo y comparar con el remito</li>
+<li>☐ Verificar que el remito coincide con el pedido</li>
+<li>☐ Revisar la especificación pactada</li>
+<li>☐ Revisar vencimientos</li>
+<li>☐ Controlar temperatura: refrigerados a 5 °C o menos, congelados a −18 °C o menos</li>
+<li>☐ Rechazar o anotar lo que llega mal, antes de firmar</li>
+<li>☐ Guardar enseguida en frío</li>
+<li>☐ Archivar remito y factura juntos</li>
+</ul>
+<h3>Checklist: antes de negociar</h3>
+<ul>
+<li>☐ Sé cuánto compro por mes, en kilos y en plata</li>
+<li>☐ Tengo calculado mi costo real actual</li>
+<li>☐ Tengo al menos dos cotizaciones reales</li>
+<li>☐ Sé qué me importa más</li>
+<li>☐ Sé qué puedo ofrecer a cambio</li>
+<li>☐ Tengo claro mi límite</li>
+<li>☐ Voy a dejar el acuerdo por escrito</li>
+</ul>
+<h3>Checklist: antes de abrir tu primer local</h3>
+<ul>
+<li>☐ Carta con ficha técnica de cada plato</li>
+<li>☐ Food cost objetivo definido</li>
+<li>☐ Al menos dos proveedores por insumo principal</li>
+<li>☐ Pruebas de rendimiento hechas antes de fijar precios</li>
+<li>☐ Precios calculados, no copiados</li>
+<li>☐ Recepción y control de stock armados desde el día uno</li>
+<li>☐ Fecha fija para el primer control mensual</li>
+</ul>
+<h3>Glosario</h3>
+<ul>
+<li><strong>Costo real:</strong> lo que cuesta de verdad un kilo de lo que usás, contando la merma.</li>
+<li><strong>Ficha técnica:</strong> receta estándar con cantidades y costos.</li>
+<li><strong>Food cost teórico:</strong> el que debería dar según las fichas.</li>
+<li><strong>Food cost real:</strong> el que dio según inventario, compras y ventas.</li>
+<li><strong>Margen bruto:</strong> lo que queda de cada venta después de la mercadería.</li>
+<li><strong>Merma:</strong> lo que se pierde entre lo que comprás y lo que servís.</li>
+<li><strong>Rendimiento:</strong> porcentaje del peso bruto que podés aprovechar.</li>
+</ul>
+<hr />
+<h2>11. Soluciones de los ejercicios</h2>
+<p><strong>Ejercicio 1:</strong> rendimiento = 3,2 ÷ 4 × 100 = 80%. Costo real = $15.000 ÷ 0,80 = $18.750 por kilo.</p>
+<p><strong>Ejercicio 2:</strong> $3.600 ÷ 0,30 = $12.000 neto de IVA.</p>
+<p><strong>Ejercicio 3:</strong> A: $20.000 ÷ 0,60 = $33.333 por kilo. B: $24.000 ÷ 0,80 = $30.000 por kilo. Conviene B.</p>
+<p><strong>Ejercicio 4:</strong> consumo = $500.000 + $1.800.000 − $450.000 = $1.850.000. Food cost real = $1.850.000 ÷ $5.500.000 = 33,6%.</p>
+<hr />
+<h2>¿Querés que revisemos tus costos juntos?</h2>
+<p>En <strong>Gestro</strong> hacemos gestión de costos, gestión de compras, asesorías y planificación de aperturas para gastronomía. Escribinos por Instagram a <strong>@somosgestro</strong>.</p>
+</main></body></html>
