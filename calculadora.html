@@ -10,20 +10,20 @@
 <style>
 /* Layout: una columna de trabajo en el celular; en escritorio, dos proveedores lado a lado y el veredicto debajo */
 :root{
---bg:#F3F4F1; --surface:#FFFFFF; --ink:#16181A; --muted:#565C57; --line:#D9DCD5;
---accent:#1E6B47; --accent-soft:#E3F0E8; --on-accent:#FFFFFF; --warn:#9A4A12;
---bar-a:#A9B0A9; --bar-b:#1E6B47;
---display:'Archivo', 'Arial Narrow', Arial, sans-serif;
---body:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bg:#F3F4F1; --surface:#FFFFFF; --ink:#16181A; --muted:#565C57; --line:#D9DCD5;
+  --accent:#1E6B47; --accent-soft:#E3F0E8; --on-accent:#FFFFFF; --warn:#9A4A12;
+  --bar-a:#A9B0A9; --bar-b:#1E6B47;
+  --display:'Archivo', 'Arial Narrow', Arial, sans-serif;
+  --body:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
---bg:#121413; --surface:#1B1E1C; --ink:#EEF0EC; --muted:#A3AAA4; --line:#2E3330;
---accent:#5BC28C; --accent-soft:#1D2E24; --on-accent:#0E1A13; --warn:#F0A060;
---bar-a:#5A625C; --bar-b:#5BC28C; color-scheme:dark}}
+  --bg:#121413; --surface:#1B1E1C; --ink:#EEF0EC; --muted:#A3AAA4; --line:#2E3330;
+  --accent:#5BC28C; --accent-soft:#1D2E24; --on-accent:#0E1A13; --warn:#F0A060;
+  --bar-a:#5A625C; --bar-b:#5BC28C; color-scheme:dark}}
 :root[data-theme="dark"]{
---bg:#121413; --surface:#1B1E1C; --ink:#EEF0EC; --muted:#A3AAA4; --line:#2E3330;
---accent:#5BC28C; --accent-soft:#1D2E24; --on-accent:#0E1A13; --warn:#F0A060;
---bar-a:#5A625C; --bar-b:#5BC28C; color-scheme:dark}
+  --bg:#121413; --surface:#1B1E1C; --ink:#EEF0EC; --muted:#A3AAA4; --line:#2E3330;
+  --accent:#5BC28C; --accent-soft:#1D2E24; --on-accent:#0E1A13; --warn:#F0A060;
+  --bar-a:#5A625C; --bar-b:#5BC28C; color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
 .wrap{max-width:960px;margin:0 auto;padding-block:32px 56px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:28px}
 .brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
@@ -62,142 +62,159 @@ input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-co
 .cta a.ig{color:inherit}
 @media (prefers-reduced-motion: reduce){.bar-fill{transition:none}}
 </style>
+
 </head>
 <body>
 <div class="wrap">
-<header class="head">
-<div class="brand">Gestro</div>
-<h1>¿Qué proveedor te conviene de verdad?</h1>
-<p class="lead">Cargá el precio por kilo y lo que rinde cada proveedor. Te mostramos el costo real de cada porción y cuánta plata ahorrás por mes. Viene cargado con un ejemplo de bife de chorizo: cambiá los números por los tuyos.</p>
-</header>
-<section class="panel" aria-labelledby="t-plato">
-<h2 id="t-plato">Tu plato</h2>
-<div class="fields">
-<label for="insumo">Insumo<input id="insumo" type="text" value="Bife de chorizo"></label>
-<label for="porcion">Porción servida (g)<input id="porcion" type="number" inputmode="decimal" min="1" value="300"></label>
-<label for="ventas">Porciones por mes<input id="ventas" type="number" inputmode="numeric" min="0" value="600"></label>
-<label for="fc">Food cost objetivo (%)<input id="fc" type="number" inputmode="decimal" min="1" max="100" value="32"></label>
+  <header class="head">
+    <div class="brand">Gestro</div>
+    <h1>¿Qué proveedor te conviene de verdad?</h1>
+    <p class="lead">Cargá el precio por kilo y lo que rinde cada proveedor. Te mostramos el costo real de cada porción y cuánta plata ahorrás por mes. Viene cargado con un ejemplo de bife de chorizo: cambiá los números por los tuyos.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="t-plato">
+    <h2 id="t-plato">Tu plato</h2>
+    <div class="fields">
+      <label for="insumo">Insumo<input id="insumo" type="text" value="Bife de chorizo"></label>
+      <label for="porcion">Porción servida (g)<input id="porcion" type="number" inputmode="decimal" min="1" value="300"></label>
+      <label for="ventas">Porciones por mes<input id="ventas" type="number" inputmode="numeric" min="0" value="600"></label>
+      <label for="fc">Food cost objetivo (%)<input id="fc" type="number" inputmode="decimal" min="1" max="100" value="32"></label>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel" aria-labelledby="t-a">
+      <h2 id="t-a">Proveedor A</h2>
+      <div class="fields">
+        <label for="a-precio">Precio por kg ($)<input id="a-precio" type="number" inputmode="decimal" min="0" value="10000"></label>
+        <label for="a-bruto">Kilos comprados<input id="a-bruto" type="number" inputmode="decimal" min="0" step="0.1" value="5"></label>
+        <label for="a-util">Kilos aprovechables<input id="a-util" type="number" inputmode="decimal" min="0" step="0.1" value="3.5"></label>
+      </div>
+      <div class="prov-out" aria-live="polite">
+        <span>Rinde <b id="a-rend">–</b></span>
+        <span>Costo real <b id="a-real">–</b>/kg</span>
+        <span>Porción <b id="a-porc">–</b></span>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="t-b">
+      <h2 id="t-b">Proveedor B</h2>
+      <div class="fields">
+        <label for="b-precio">Precio por kg ($)<input id="b-precio" type="number" inputmode="decimal" min="0" value="12500"></label>
+        <label for="b-bruto">Kilos comprados<input id="b-bruto" type="number" inputmode="decimal" min="0" step="0.1" value="5"></label>
+        <label for="b-util">Kilos aprovechables<input id="b-util" type="number" inputmode="decimal" min="0" step="0.1" value="4.5"></label>
+      </div>
+      <div class="prov-out" aria-live="polite">
+        <span>Rinde <b id="b-rend">–</b></span>
+        <span>Costo real <b id="b-real">–</b>/kg</span>
+        <span>Porción <b id="b-porc">–</b></span>
+      </div>
+    </section>
+  </div>
+
+  <section class="verdict" aria-live="polite">
+    <span class="tag">Resultado</span>
+    <h2 id="v-title">–</h2>
+    <p id="v-text"></p>
+    <div class="stats">
+      <div class="stat"><span>Ahorro por porción</span><b id="s-porc">–</b></div>
+      <div class="stat"><span>Ahorro por mes</span><b id="s-mes">–</b></div>
+      <div class="stat"><span>Ahorro por año</span><b id="s-anio">–</b></div>
+      <div class="stat"><span>Precio de venta sugerido</span><b id="s-precio">–</b></div>
+    </div>
+    <div class="bars" aria-label="Costo de una porción por proveedor">
+      <div class="bar-row"><span>Proveedor A</span><div class="bar-track"><div class="bar-fill" id="bar-a" style="background:var(--bar-a);width:0"></div></div><b id="bar-a-v">–</b></div>
+      <div class="bar-row"><span>Proveedor B</span><div class="bar-track"><div class="bar-fill" id="bar-b" style="background:var(--bar-b);width:0"></div></div><b id="bar-b-v">–</b></div>
+    </div>
+    <p class="note" id="v-note">El precio sugerido es neto de IVA, con el costo del insumo más barato y tu food cost objetivo. Sumá el resto de los ingredientes del plato para el precio final.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Esto es un insumo. ¿Y el resto de tu carta?</h2>
+    <p>En la guía <strong>Comprá bien, ganá más</strong> aprendés a costear cada plato, poner precios que dejen plata y negociar con tus proveedores. Incluye plantillas, checklists y un plan de 7 días.</p>
+    <a class="btn" href="https://mpago.la/2GsH2Lm" target="_blank" rel="noopener">Comprar la guía · $39.000</a>
+    <a class="btn" href="https://ig.me/m/somosgestro" target="_blank" rel="noopener" style="background:transparent;border:1px solid currentColor;color:inherit">Mandanos tu caso por Instagram</a>
+    <p class="note" style="color:inherit;opacity:.75">¿Querés que revisemos los costos de tu local? <a class="ig" href="https://ig.me/m/somosgestro" target="_blank" rel="noopener">Escribinos por Instagram</a> y lo vemos juntos.</p>
+  </section>
 </div>
-</section>
-<div class="grid2">
-<section class="panel" aria-labelledby="t-a">
-<h2 id="t-a">Proveedor A</h2>
-<div class="fields">
-<label for="a-precio">Precio por kg ($)<input id="a-precio" type="number" inputmode="decimal" min="0" value="10000"></label>
-<label for="a-bruto">Kilos comprados<input id="a-bruto" type="number" inputmode="decimal" min="0" step="0.1" value="5"></label>
-<label for="a-util">Kilos aprovechables<input id="a-util" type="number" inputmode="decimal" min="0" step="0.1" value="3.5"></label>
-</div>
-<div class="prov-out" aria-live="polite">
-<span>Rinde <b id="a-rend">–</b></span>
-<span>Costo real <b id="a-real">–</b>/kg</span>
-<span>Porción <b id="a-porc">–</b></span>
-</div>
-</section>
-<section class="panel" aria-labelledby="t-b">
-<h2 id="t-b">Proveedor B</h2>
-<div class="fields">
-<label for="b-precio">Precio por kg ($)<input id="b-precio" type="number" inputmode="decimal" min="0" value="12500"></label>
-<label for="b-bruto">Kilos comprados<input id="b-bruto" type="number" inputmode="decimal" min="0" step="0.1" value="5"></label>
-<label for="b-util">Kilos aprovechables<input id="b-util" type="number" inputmode="decimal" min="0" step="0.1" value="4.5"></label>
-</div>
-<div class="prov-out" aria-live="polite">
-<span>Rinde <b id="b-rend">–</b></span>
-<span>Costo real <b id="b-real">–</b>/kg</span>
-<span>Porción <b id="b-porc">–</b></span>
-</div>
-</section>
-</div>
-<section class="verdict" aria-live="polite">
-<span class="tag">Resultado</span>
-<h2 id="v-title">–</h2>
-<p id="v-text"></p>
-<div class="stats">
-<div class="stat"><span>Ahorro por porción</span><b id="s-porc">–</b></div>
-<div class="stat"><span>Ahorro por mes</span><b id="s-mes">–</b></div>
-<div class="stat"><span>Ahorro por año</span><b id="s-anio">–</b></div>
-<div class="stat"><span>Precio de venta sugerido</span><b id="s-precio">–</b></div>
-</div>
-<div class="bars" aria-label="Costo de una porción por proveedor">
-<div class="bar-row"><span>Proveedor A</span><div class="bar-track"><div class="bar-fill" id="bar-a" style="background:var(--bar-a);width:0"></div></div><b id="bar-a-v">–</b></div>
-<div class="bar-row"><span>Proveedor B</span><div class="bar-track"><div class="bar-fill" id="bar-b" style="background:var(--bar-b);width:0"></div></div><b id="bar-b-v">–</b></div>
-</div>
-<p class="note" id="v-note">El precio sugerido es neto de IVA, con el costo del insumo más barato y tu food cost objetivo. Sumá el resto de los ingredientes del plato para el precio final.</p>
-</section>
-<section class="cta">
-<h2>Esto es un insumo. ¿Y el resto de tu carta?</h2>
-<p>En la guía <strong>Comprá bien, ganá más</strong> aprendés a costear cada plato, poner precios que dejen plata y negociar con tus proveedores. Incluye plantillas, checklists y un plan de 7 días.</p>
-<a class="btn" href="https://mpago.la/2GsH2Lm" target="_blank" rel="noopener">Comprar la guía · $39.000</a>
-<p class="note" style="color:inherit;opacity:.75">¿Querés que revisemos los costos de tu local? Escribinos en Instagram a <a class="ig" href="https://www.instagram.com/somosgestro/" target="_blank" rel="noopener">@somosgestro</a>.</p>
-</section>
-</div>
+
 <script>
 (function(){
-var $ = function(id){ return document.getElementById(id); };
-var peso = new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0});
-var pct = new Intl.NumberFormat('es-AR', {maximumFractionDigits:0});
-var num = function(id){ var v = parseFloat(String($(id).value).replace(',', '.')); return isFinite(v) ? v : NaN; };
-function prov(p){
-var precio = num(p+'-precio'), bruto = num(p+'-bruto'), util = num(p+'-util');
-var porcion = num('porcion') / 1000;
-var ok = precio > 0 && bruto > 0 && util > 0 && util <= bruto && porcion > 0;
-if (!ok) return {ok:false, overflow: util > bruto};
-var rend = util / bruto;
-var real = precio / rend;
-return {ok:true, rend:rend, real:real, porc: real * porcion};
-}
-function show(p, r){
-$(p+'-rend').textContent = r.ok ? pct.format(r.rend*100) + '%' : '–';
-$(p+'-real').textContent = r.ok ? peso.format(r.real) : '–';
-$(p+'-porc').textContent = r.ok ? peso.format(r.porc) : '–';
-}
-function update(){
-var a = prov('a'), b = prov('b');
-show('a', a); show('b', b);
-var insumo = ($('insumo').value || 'este insumo').trim();
-var ventas = Math.max(0, num('ventas') || 0);
-var fc = num('fc');
-if (!a.ok || !b.ok){
-$('v-title').textContent = 'Completá los datos de los dos proveedores';
-var msg = 'Necesitamos precio por kilo, kilos comprados y kilos aprovechables de cada uno.';
-if (a.overflow || b.overflow) msg = 'Los kilos aprovechables no pueden ser más que los kilos comprados.';
-$('v-text').innerHTML = '<span class="warn"></span>';
-$('v-text').firstChild.textContent = msg;
-['s-porc','s-mes','s-anio','s-precio','bar-a-v','bar-b-v'].forEach(function(id){ $(id).textContent = '–'; });
-$('bar-a').style.width = '0'; $('bar-b').style.width = '0';
-return;
-}
-var winner = a.porc <= b.porc ? 'A' : 'B';
-var loser = winner === 'A' ? 'B' : 'A';
-var w = winner === 'A' ? a : b, l = winner === 'A' ? b : a;
-var diff = l.porc - w.porc;
-var precioW = num(winner.toLowerCase()+'-precio'), precioL = num(loser.toLowerCase()+'-precio');
-if (diff < 0.5){
-$('v-title').textContent = 'Los dos te cuestan lo mismo por porción';
-$('v-text').textContent = 'En ' + insumo.toLowerCase() + ' la diferencia es mínima. Decidí por plazo de pago, frecuencia de entrega y calidad pareja.';
-} else {
-$('v-title').textContent = 'Te conviene el proveedor ' + winner;
-var txt = 'Cada porción de ' + insumo.toLowerCase() + ' te sale ' + peso.format(diff) + ' menos con el proveedor ' + winner + '.';
-if (precioW > precioL){
-var mas = (precioW / precioL - 1) * 100;
-txt += ' Aunque su precio por kilo es ' + pct.format(mas) + '% más caro, rinde más y desperdiciás menos.';
-}
-$('v-text').textContent = txt;
-}
-$('s-porc').textContent = peso.format(diff);
-$('s-mes').textContent = peso.format(diff * ventas);
-$('s-anio').textContent = peso.format(diff * ventas * 12);
-$('s-precio').textContent = (fc > 0 && fc <= 100) ? peso.format(w.porc / (fc/100)) : '–';
-$('bar-a').style.background = winner === 'A' ? 'var(--bar-b)' : 'var(--bar-a)';
-$('bar-b').style.background = winner === 'B' ? 'var(--bar-b)' : 'var(--bar-a)';
-var max = Math.max(a.porc, b.porc);
-$('bar-a').style.width = (a.porc / max * 100) + '%';
-$('bar-b').style.width = (b.porc / max * 100) + '%';
-$('bar-a-v').textContent = peso.format(a.porc);
-$('bar-b-v').textContent = peso.format(b.porc);
-}
-document.querySelectorAll('input').forEach(function(el){ el.addEventListener('input', update); });
-update();
+  var $ = function(id){ return document.getElementById(id); };
+  var peso = new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0});
+  var pct = new Intl.NumberFormat('es-AR', {maximumFractionDigits:0});
+  var num = function(id){ var v = parseFloat(String($(id).value).replace(',', '.')); return isFinite(v) ? v : NaN; };
+
+  function prov(p){
+    var precio = num(p+'-precio'), bruto = num(p+'-bruto'), util = num(p+'-util');
+    var porcion = num('porcion') / 1000;
+    var ok = precio > 0 && bruto > 0 && util > 0 && util <= bruto && porcion > 0;
+    if (!ok) return {ok:false, overflow: util > bruto};
+    var rend = util / bruto;
+    var real = precio / rend;
+    return {ok:true, rend:rend, real:real, porc: real * porcion};
+  }
+
+  function show(p, r){
+    $(p+'-rend').textContent = r.ok ? pct.format(r.rend*100) + '%' : '–';
+    $(p+'-real').textContent = r.ok ? peso.format(r.real) : '–';
+    $(p+'-porc').textContent = r.ok ? peso.format(r.porc) : '–';
+  }
+
+  function update(){
+    var a = prov('a'), b = prov('b');
+    show('a', a); show('b', b);
+    var insumo = ($('insumo').value || 'este insumo').trim();
+    var ventas = Math.max(0, num('ventas') || 0);
+    var fc = num('fc');
+
+    if (!a.ok || !b.ok){
+      $('v-title').textContent = 'Completá los datos de los dos proveedores';
+      var msg = 'Necesitamos precio por kilo, kilos comprados y kilos aprovechables de cada uno.';
+      if (a.overflow || b.overflow) msg = 'Los kilos aprovechables no pueden ser más que los kilos comprados.';
+      $('v-text').innerHTML = '<span class="warn"></span>';
+      $('v-text').firstChild.textContent = msg;
+      ['s-porc','s-mes','s-anio','s-precio','bar-a-v','bar-b-v'].forEach(function(id){ $(id).textContent = '–'; });
+      $('bar-a').style.width = '0'; $('bar-b').style.width = '0';
+      return;
+    }
+
+    var winner = a.porc <= b.porc ? 'A' : 'B';
+    var loser = winner === 'A' ? 'B' : 'A';
+    var w = winner === 'A' ? a : b, l = winner === 'A' ? b : a;
+    var diff = l.porc - w.porc;
+    var precioW = num(winner.toLowerCase()+'-precio'), precioL = num(loser.toLowerCase()+'-precio');
+
+    if (diff < 0.5){
+      $('v-title').textContent = 'Los dos te cuestan lo mismo por porción';
+      $('v-text').textContent = 'En ' + insumo.toLowerCase() + ' la diferencia es mínima. Decidí por plazo de pago, frecuencia de entrega y calidad pareja.';
+    } else {
+      $('v-title').textContent = 'Te conviene el proveedor ' + winner;
+      var txt = 'Cada porción de ' + insumo.toLowerCase() + ' te sale ' + peso.format(diff) + ' menos con el proveedor ' + winner + '.';
+      if (precioW > precioL){
+        var mas = (precioW / precioL - 1) * 100;
+        txt += ' Aunque su precio por kilo es ' + pct.format(mas) + '% más caro, rinde más y desperdiciás menos.';
+      }
+      $('v-text').textContent = txt;
+    }
+
+    $('s-porc').textContent = peso.format(diff);
+    $('s-mes').textContent = peso.format(diff * ventas);
+    $('s-anio').textContent = peso.format(diff * ventas * 12);
+    $('s-precio').textContent = (fc > 0 && fc <= 100) ? peso.format(w.porc / (fc/100)) : '–';
+
+    $('bar-a').style.background = winner === 'A' ? 'var(--bar-b)' : 'var(--bar-a)';
+    $('bar-b').style.background = winner === 'B' ? 'var(--bar-b)' : 'var(--bar-a)';
+    var max = Math.max(a.porc, b.porc);
+    $('bar-a').style.width = (a.porc / max * 100) + '%';
+    $('bar-b').style.width = (b.porc / max * 100) + '%';
+    $('bar-a-v').textContent = peso.format(a.porc);
+    $('bar-b-v').textContent = peso.format(b.porc);
+  }
+
+  document.querySelectorAll('input').forEach(function(el){ el.addEventListener('input', update); });
+  update();
 })();
 </script>
+
 </body>
 </html>
